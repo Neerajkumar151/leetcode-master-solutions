@@ -24,12 +24,12 @@ public:
 class Solution_TLE {
 public:
     bool find132pattern(vector<int>& nums) {
-        for (int k = 0; k < size(nums); ++k) {
+        for (int i = 0; i < size(nums); ++i) {
             bool valid = false;
-            for (int j = 0; j < k; ++j) {
-                if (nums[j] < nums[k]) {
+            for (int j = 0; j < i; ++j) {
+                if (nums[j] < nums[i]) {
                     valid = true;
-                } else if (nums[j] > nums[k]) {
+                } else if (nums[j] > nums[i]) {
                     if (valid) {
                         return true;
                     }
